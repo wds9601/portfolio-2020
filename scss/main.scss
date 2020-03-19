@@ -1,5 +1,221 @@
-$primary-color: #444;
+@mixin ease-in {
+    transition: 0.5s, ease-in;
+}
+
+$background-color: #fff;
+$primary-color: black;
+$accent-color: #12c2e9;
+$accent-color2: #f953c6;
 
 body {
-    background: $primary-color;
+    margin: 0;
+    padding: 0;
+    font-family: 'Unica One', cursive, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.nav-container {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+    width: 100vw;
+    border-bottom: 2px solid black;
+    
+    background-color: $primary-color;
+    color: $background-color;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.nav-links {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    width: 30%;
+    height: 3vh;
+    background-color: $primary-color;
+
+    a {
+        text-decoration: none;
+        color: $background-color;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    :hover {
+        border-bottom: 2px solid $accent-color2;
+    }
+
+}
+
+.section {
+    height: 100vh;
+    text-align: right;
+    border-top: 1px solid black;
+
+    #home {
+        height: 92vh;
+    }
+}
+
+.home-name-tag {
+    margin-right: 10vw;
+    margin-top: 45vh;
+    line-height: 0;
+    height: 30vh;
+    border-right: 5px solid black;
+    padding: 1% 2%;
+
+    h1 {
+        font-size: 55px;
+    }
+
+    span {
+        font-size: 70px;
+        letter-spacing: 5px;
+    }
+
+    h3 {
+        font-size: 45px;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    .icons {
+        padding: 20px;
+        font-size: 3rem;
+
+
+        :hover {
+            color: $accent-color;
+            cursor: pointer;
+        }
+    }
+}
+
+.nav-burger {
+    display: none;
+
+    div {
+        width: 1.5rem;
+        height: 2px;
+        background-color: $background-color;
+        margin: 4px;
+    }
+}
+
+// Large Tablet
+@media screen and (max-width: 991px) {
+    .nav-links {
+        width: 40%;
+    }
+
+    .home-name-tag {
+        height: 22vh;
+
+        h1 {
+            font-size: 39px;
+        }
+        span {
+            font-size: 55px;
+            letter-spacing: 3px;
+        }
+        h3 {
+            font-size: 30px;
+        }
+        .icons {
+            padding: 10px;
+            font-size: 2rem;
+        }
+    }
+
+    
+}
+
+//Medium Tablet
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        left: 0px;
+        height: 92vh;
+        top: 9vh;
+        width: 40%;
+        background-color: rgba($background-color, 1.0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        color: $primary-color;
+        font-weight: 800;
+        font-size: 2rem;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in;
+
+        a {
+            color: $primary-color;
+        }
+        
+        li {
+            opacity: 0.5;
+        }
+    }
+
+    .nav-burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .home-name-tag {
+        height: 18vh;
+
+        h1 {
+            font-size: 30px;
+        }
+        span {
+            font-size: 45px;
+        }
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+    .nav-active {
+        transform: translateX(0%)
+    }
+}
+
+//Smart Phone
+@media screen and (max-width: 515px) {
+    .nav-links {
+        width: 50%;
+    }
+
+    .home-name-tag {
+        height: 17vh;
+        margin-right: 6vw;
+
+        h1 {
+            font-size: 25px;
+        }
+        span {
+            font-size: 40px;
+            letter-spacing: 2px;
+        }
+        h3 {
+            font-size: 15px;
+        }
+    }
+
+
 }
