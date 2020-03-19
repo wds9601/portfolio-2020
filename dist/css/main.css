@@ -32,7 +32,8 @@ body {
   .nav-links li {
     list-style: none; }
   .nav-links :hover {
-    border-bottom: 2px solid #f953c6; }
+    border-bottom: 2px solid #f953c6;
+    transition: 1.0s, ease-in; }
 
 .section {
   height: 100vh;
@@ -40,6 +41,9 @@ body {
   border-top: 1px solid black; }
   .section #home {
     height: 92vh; }
+  .section #about {
+    display: flex;
+    justify-content: center; }
 
 .home-name-tag {
   margin-right: 10vw;
@@ -71,6 +75,83 @@ body {
     height: 2px;
     background-color: #fff;
     margin: 4px; }
+
+.about-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex; }
+  .about-container div {
+    height: 100vh;
+    padding: 2%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: auto; }
+    .about-container div .bio-box {
+      margin-right: 5vh;
+      width: 50vw; }
+    .about-container div .photo-box {
+      width: 50vw; }
+  .about-container img {
+    margin: auto;
+    border: 4px solid #29fa29;
+    border-radius: 50%; }
+  .about-container p {
+    line-height: 35px;
+    font-size: 1.5rem; }
+
+.project-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 10vh; }
+  .project-box .project {
+    height: 85vh;
+    width: 23vw;
+    margin: 0;
+    text-align: center;
+    align-items: center; }
+  .project-box .project1 .img-box {
+    height: 35vh;
+    border: 2px solid black;
+    background: url(https://i.imgur.com/nBNRUTa.png);
+    background-size: contain; }
+  .project-box .project2 .img-box {
+    height: 35vh;
+    border: 2px solid black;
+    background: url(https://i.imgur.com/t1VCXO8.png);
+    background-size: contain; }
+  .project-box .project3 .img-box {
+    height: 35vh;
+    border: 2px solid black;
+    background: url(https://i.imgur.com/Wgz5LOf.png?1);
+    background-size: contain; }
+  .project-box .project4 .img-box {
+    height: 35vh;
+    border: 2px solid black;
+    background: url(https://i.imgur.com/Jg6oj1i.png);
+    background-size: contain; }
+  .project-box .title {
+    margin-top: 0.5rem;
+    font-size: 1.5rem; }
+  .project-box p {
+    margin-bottom: 1.5rem; }
+  .project-box .button-box {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 3px solid black;
+    padding-bottom: 3vh; }
+    .project-box .button-box button {
+      width: 10vw;
+      height: 6vh;
+      border: 1px solid black;
+      font-size: 0.75rem;
+      font-family: Avenir, sans-serif; }
+    .project-box .button-box :hover {
+      border: 2px solid #fffa00;
+      cursor: pointer; }
 
 @media screen and (max-width: 991px) {
   .nav-links {

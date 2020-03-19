@@ -1,11 +1,13 @@
 @mixin ease-in {
-    transition: 0.5s, ease-in;
+    transition: 1.0s, ease-in;
 }
 
 $background-color: #fff;
 $primary-color: black;
-$accent-color: #12c2e9;
-$accent-color2: #f953c6;
+$home-color: #12c2e9;
+$nav-color: #f953c6;
+$about-color: #29fa29;
+$project-color: #fffa00;
 
 body {
     margin: 0;
@@ -50,7 +52,8 @@ body {
     }
     
     :hover {
-        border-bottom: 2px solid $accent-color2;
+        border-bottom: 2px solid $nav-color;
+        @include ease-in;
     }
 
 }
@@ -62,6 +65,11 @@ body {
 
     #home {
         height: 92vh;
+    }
+
+    #about {
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -92,9 +100,8 @@ body {
         padding: 20px;
         font-size: 3rem;
 
-
         :hover {
-            color: $accent-color;
+            color: $home-color;
             cursor: pointer;
         }
     }
@@ -110,6 +117,127 @@ body {
         margin: 4px;
     }
 }
+
+.about-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+
+    div {
+        height: 100vh;
+        padding: 2%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        margin: auto;
+
+        .bio-box {
+            margin-right: 5vh;
+            width: 50vw;
+        }
+
+        .photo-box {
+            width: 50vw;
+        }
+    }
+
+    img {
+        margin: auto;
+        border: 4px solid $about-color;
+        border-radius: 50%;
+    }
+
+    p {
+        line-height: 35px;
+        font-size: 1.5rem;
+    }
+}
+
+.project-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10vh;
+
+    .project {
+        height: 85vh;
+        width: 23vw;
+        margin: 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    
+
+    .project1 {
+        .img-box {
+            height: 35vh;
+            border: 2px solid black;
+            background: url(https://i.imgur.com/nBNRUTa.png);
+            background-size: contain;
+        }
+    }
+
+    .project2 {
+        .img-box {
+            height: 35vh;
+            border: 2px solid black;
+            background: url(https://i.imgur.com/t1VCXO8.png);
+            background-size: contain;
+        }
+    }
+
+    .project3 {
+        .img-box {
+            height: 35vh;
+            border: 2px solid black;
+            background: url(https://i.imgur.com/Wgz5LOf.png?1);
+            background-size: contain;
+        }
+    }
+
+    .project4 {
+        .img-box {
+            height: 35vh;
+            border: 2px solid black;
+            background: url(https://i.imgur.com/Jg6oj1i.png);
+            background-size: contain;
+        }
+    }
+
+    .title {
+        margin-top: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+    }
+
+    .button-box {
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-bottom: 3px solid black;
+        padding-bottom: 3vh;
+
+        button {
+            width: 10vw;
+            height: 6vh;
+            border: 1px solid black;
+            font-size: 0.75rem;
+            font-family: Avenir, sans-serif;
+        }
+
+        :hover {
+            border: 2px solid $project-color;
+            cursor: pointer;
+        }
+    }
+}
+
+
 
 // Large Tablet
 @media screen and (max-width: 991px) {
@@ -165,7 +293,7 @@ body {
         a {
             color: $primary-color;
         }
-        
+
         li {
             opacity: 0.5;
         }
