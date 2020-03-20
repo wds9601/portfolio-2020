@@ -185,11 +185,18 @@ main {
       border: 1px solid black;
       font-size: 0.75rem;
       font-family: Avenir, sans-serif; }
-    .project-box .button-box :hover {
-      border: 2px solid #f953c6;
-      transition: 0.5s;
-      transition-timing-function: ease-out;
-      cursor: pointer; }
+      .project-box .button-box button a {
+        text-decoration: none;
+        color: black; }
+      .project-box .button-box button:hover {
+        border: 2px solid #f953c6;
+        transition: 0.5s;
+        transition-timing-function: ease-out;
+        cursor: pointer; }
+        .project-box .button-box button:hover a {
+          border-bottom: 1px solid #f953c6;
+          transition: 0.5s;
+          transition-timing-function: ease-out; }
 
 footer {
   flex-shrink: 0;
@@ -229,9 +236,10 @@ footer {
     position: absolute;
     left: 0px;
     height: 92vh;
-    top: 9vh;
+    top: 8vh;
     width: 40%;
     background-color: white;
+    border: 2px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -267,6 +275,8 @@ footer {
       margin: 8vh 0;
       display: flex;
       justify-content: center; }
+      .about-container .photo-box img {
+        width: auto; }
     .about-container .bio-box {
       height: 30vh;
       width: 100vw;
@@ -291,12 +301,18 @@ footer {
     height: 17vh;
     margin-right: 6vw; }
     .home-name-tag h1 {
-      font-size: 25px; }
+      font-size: 22px; }
     .home-name-tag span {
-      font-size: 40px;
-      letter-spacing: 2px; }
+      font-size: 33px;
+      letter-spacing: 1px; }
     .home-name-tag h3 {
       font-size: 15px; }
+  .about-container .photo-box {
+    margin: 0 auto; }
+    .about-container .photo-box img {
+      width: 65vw; }
+  .about-container .bio-box {
+    height: auto; }
   .project {
     margin-bottom: 5vh; } }
 

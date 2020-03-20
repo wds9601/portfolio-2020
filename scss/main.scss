@@ -278,13 +278,27 @@ main {
             border: 1px solid black;
             font-size: 0.75rem;
             font-family: Avenir, sans-serif;
+
+            a {
+                text-decoration: none;
+                color: $primary-color;
+            }
+
+            &:hover {
+                border: 2px solid $nav-color;
+                transition: 0.5s;
+                transition-timing-function: ease-out;
+                cursor: pointer;
+
+                a {
+                    border-bottom: 1px solid $nav-color;
+                    transition: 0.5s;
+                    transition-timing-function: ease-out;
+                }
+            }
         }
 
-        :hover {
-            border: 2px solid $nav-color;
-            @include easeIn;
-            cursor: pointer;
-        }
+        
     }
 }
 
@@ -357,9 +371,10 @@ footer {
         position: absolute;
         left: 0px;
         height: 92vh;
-        top: 9vh;
+        top: 8vh;
         width: 40%;
         background-color: rgba($background-color, 1.0);
+        border: 2px solid $primary-color;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -414,6 +429,10 @@ footer {
             margin: 8vh 0;
             display: flex;
             justify-content: center;
+
+            img {
+                width: auto;
+            }
         }
 
         .bio-box {
@@ -456,14 +475,28 @@ footer {
         margin-right: 6vw;
 
         h1 {
-            font-size: 25px;
+            font-size: 22px;
         }
         span {
-            font-size: 40px;
-            letter-spacing: 2px;
+            font-size: 33px;
+            letter-spacing: 1px;
         }
         h3 {
             font-size: 15px;
+        }
+    }
+
+    .about-container {
+        .photo-box {
+            margin: 0 auto;
+
+            img {
+                width: 65vw;
+            }
+        }
+
+        .bio-box {
+            height: auto;
         }
     }
 
