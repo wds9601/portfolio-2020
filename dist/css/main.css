@@ -8,6 +8,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  top: 0;
   height: 8vh;
   width: 100vw;
   border-bottom: 2px solid black;
@@ -33,21 +34,41 @@ body {
     list-style: none; }
   .nav-links :hover {
     border-bottom: 2px solid #f953c6;
-    transition: 1.0s, ease-in; }
+    transition: 0.5s;
+    transition-timing-function: ease-out; }
+
+.nav-burger {
+  display: none; }
+  .nav-burger div {
+    width: 1.5rem;
+    height: 2px;
+    background-color: #fff;
+    margin: 4px; }
+  .nav-burger :hover {
+    background-color: #f953c6;
+    transition: 0.5s;
+    transition-timing-function: ease-out; }
 
 .section {
-  height: 100vh;
-  text-align: right;
-  border-top: 1px solid black; }
-  .section #home {
-    height: 92vh; }
+  text-align: right; }
+  .section#home {
+    height: 50vh;
+    padding-top: 25%;
+    border: 2px solid black; }
   .section #about {
+    height: 100vh;
     display: flex;
     justify-content: center; }
+  .section #project {
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    padding-bottom: 5vh;
+    margin-bottom: 5vh; }
 
 .home-name-tag {
   margin-right: 10vw;
-  margin-top: 45vh;
   line-height: 0;
   height: 30vh;
   border-right: 5px solid black;
@@ -66,15 +87,9 @@ body {
     font-size: 3rem; }
     .home-name-tag .icons :hover {
       color: #12c2e9;
+      transition: 0.5s;
+      transition-timing-function: ease-out;
       cursor: pointer; }
-
-.nav-burger {
-  display: none; }
-  .nav-burger div {
-    width: 1.5rem;
-    height: 2px;
-    background-color: #fff;
-    margin: 4px; }
 
 .about-container {
   height: 100vh;
@@ -93,18 +108,25 @@ body {
     .about-container div .photo-box {
       width: 50vw; }
   .about-container img {
-    margin: auto;
-    border: 4px solid #29fa29;
+    margin: 0;
+    height: 45vh;
+    width: auto;
+    border: 3px solid black;
     border-radius: 50%; }
+    .about-container img:hover {
+      border-color: #12c2e9;
+      transition: 0.5s;
+      transition-timing-function: ease-out; }
   .about-container p {
     line-height: 35px;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    font-family: Avenir, sans-serif; }
 
 .project-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding-top: 10vh; }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  padding: 10vh 1vw; }
   .project-box .project {
     height: 85vh;
     width: 23vw;
@@ -113,29 +135,36 @@ body {
     align-items: center; }
   .project-box .project1 .img-box {
     height: 35vh;
+    width: 100%;
     border: 2px solid black;
     background: url(https://i.imgur.com/nBNRUTa.png);
-    background-size: contain; }
+    background-size: cover;
+    background-repeat: no-repeat; }
   .project-box .project2 .img-box {
     height: 35vh;
     border: 2px solid black;
     background: url(https://i.imgur.com/t1VCXO8.png);
-    background-size: contain; }
+    background-size: cover;
+    background-repeat: no-repeat; }
   .project-box .project3 .img-box {
     height: 35vh;
     border: 2px solid black;
     background: url(https://i.imgur.com/Wgz5LOf.png?1);
-    background-size: contain; }
+    background-size: cover;
+    background-repeat: no-repeat; }
   .project-box .project4 .img-box {
     height: 35vh;
+    width: auto;
     border: 2px solid black;
     background: url(https://i.imgur.com/Jg6oj1i.png);
-    background-size: contain; }
+    background-size: cover;
+    background-repeat: no-repeat; }
   .project-box .title {
     margin-top: 0.5rem;
     font-size: 1.5rem; }
   .project-box p {
-    margin-bottom: 1.5rem; }
+    margin-bottom: 1.5rem;
+    font-family: Avenir, sans-serif; }
   .project-box .button-box {
     height: auto;
     display: flex;
@@ -150,10 +179,24 @@ body {
       font-size: 0.75rem;
       font-family: Avenir, sans-serif; }
     .project-box .button-box :hover {
-      border: 2px solid #fffa00;
+      border: 2px solid #f953c6;
+      transition: 0.5s;
+      transition-timing-function: ease-out;
       cursor: pointer; }
 
+footer {
+  position: fixed;
+  margin-top: 5vh;
+  height: 5vh;
+  width: 100vw;
+  text-align: center;
+  color: #fff;
+  background-color: black;
+  bottom: 0; }
+
 @media screen and (max-width: 991px) {
+  .section#home {
+    padding-top: 55vh; }
   .nav-links {
     width: 40%; }
   .home-name-tag {
@@ -172,6 +215,10 @@ body {
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden; }
+  .section#home {
+    padding-top: 55vh; }
+  .section#about {
+    padding-top: 8vh; }
   .nav-links {
     position: absolute;
     left: 0px;
@@ -204,7 +251,32 @@ body {
     .home-name-tag h3 {
       font-size: 20px; }
   .nav-active {
-    transform: translateX(0%); } }
+    transform: translateX(0%); }
+  .about-container {
+    display: block; }
+    .about-container .photo-box {
+      height: 50vh;
+      width: 100vw;
+      padding: 0;
+      margin: 8vh 0;
+      display: flex;
+      justify-content: center; }
+    .about-container .bio-box {
+      height: 30vh;
+      width: 100vw;
+      padding: 0; }
+  .project-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10vh 5vw;
+    margin: 0;
+    width: 90%; }
+    .project-box .project {
+      width: 100%; }
+    .project-box .button-box {
+      width: 100%; }
+      .project-box .button-box button {
+        width: 20vw; } }
 
 @media screen and (max-width: 515px) {
   .nav-links {
@@ -218,4 +290,38 @@ body {
       font-size: 40px;
       letter-spacing: 2px; }
     .home-name-tag h3 {
-      font-size: 15px; } }
+      font-size: 15px; }
+  .project {
+    margin-bottom: 5vh; } }
+
+@media screen and (max-width: 360px) {
+  .nav-links {
+    width: 50%; }
+  .home-name-tag {
+    height: 17vh;
+    margin-right: 4vw; }
+    .home-name-tag h1 {
+      font-size: 20px; }
+    .home-name-tag span {
+      font-size: 30px;
+      letter-spacing: 1px; }
+    .home-name-tag h3 {
+      font-size: 13px; }
+  .about-container {
+    padding-top: 5vh; }
+    .about-container .photo-box {
+      height: 40vh;
+      width: 80vw;
+      margin: 0 auto; }
+      .about-container .photo-box img {
+        height: 40vh; }
+      .about-container .photo-box .photo {
+        width: 80vw;
+        border-radius: 50%; }
+    .about-container .bio-box {
+      height: 60vh; }
+      .about-container .bio-box p {
+        font-size: 16px; }
+    .about-container .project {
+      margin-bottom: 5vh;
+      height: 100%; } }
