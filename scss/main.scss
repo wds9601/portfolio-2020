@@ -14,6 +14,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Unica One', cursive, Avenir, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 .nav-container {
@@ -81,7 +87,6 @@ body {
     &#home {
         height: 50vh;
         padding-top: 25%;
-        border: 2px solid black;
     }
 
     #about {
@@ -139,6 +144,7 @@ body {
     height: 100vh;
     width: 100vw;
     display: flex;
+    justify-content: space-around;
 
     div {
         height: 100vh;
@@ -151,17 +157,21 @@ body {
         .bio-box {
             margin-right: 5vh;
             width: 50vw;
+
+            p {
+                width: auto;
+            }
         }
 
         .photo-box {
-            width: 50vw;
+            width: auto;
         }
     }
 
     img {
         margin: 0;
         height: 45vh;
-        width: auto;
+        width: 25vw;
         border: 3px solid black;
         border-radius: 50%;
 
@@ -193,7 +203,7 @@ body {
     
 
     .project {
-        height: 85vh;
+        height: auto;
         width: 23vw;
         margin: 0;
         text-align: center;
@@ -280,8 +290,7 @@ body {
 
 // Footer
 footer {
-    position: fixed;
-    margin-top: 5vh;
+    flex-shrink: 0;
     height: 5vh;
     width: 100vw;
     text-align: center;
