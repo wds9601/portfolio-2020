@@ -90,10 +90,12 @@ main {
     padding: 20px;
     font-size: 3rem; }
     .home-name-tag .icons :hover {
-      color: #12c2e9;
+      color: #F37335;
       transition: 0.5s;
       transition-timing-function: ease-out;
       cursor: pointer; }
+    .home-name-tag .icons i {
+      color: #12c2e9; }
 
 .about-container {
   height: 100vh;
@@ -189,12 +191,12 @@ main {
         text-decoration: none;
         color: black; }
       .project-box .button-box button:hover {
-        border: 2px solid #f953c6;
+        border: 2px solid #F37335;
         transition: 0.5s;
         transition-timing-function: ease-out;
         cursor: pointer; }
         .project-box .button-box button:hover a {
-          border-bottom: 1px solid #f953c6;
+          border-bottom: 1px solid #F37335;
           transition: 0.5s;
           transition-timing-function: ease-out; }
 
@@ -252,10 +254,17 @@ footer {
     .nav-links a {
       color: black; }
     .nav-links li {
-      opacity: 0.5; }
+      opacity: 1; }
   .nav-burger {
     display: block;
     cursor: pointer; }
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(-100%); }
+    to {
+      opacity: 1;
+      transform: translateX(0%); } }
   .home-name-tag {
     height: 18vh; }
     .home-name-tag h1 {
@@ -276,7 +285,7 @@ footer {
       display: flex;
       justify-content: center; }
       .about-container .photo-box img {
-        width: auto; }
+        width: 45vw; }
     .about-container .bio-box {
       height: 30vh;
       width: 100vw;
@@ -310,11 +319,17 @@ footer {
   .about-container .photo-box {
     margin: 0 auto; }
     .about-container .photo-box img {
-      width: 65vw; }
+      width: 75vw; }
   .about-container .bio-box {
     height: auto; }
   .project {
-    margin-bottom: 5vh; } }
+    margin-bottom: 5vh; }
+  .project-box {
+    grid-template-columns: repeat(1, 1fr); }
+    .project-box .button-box button {
+      width: 30vw; }
+  .button-box button {
+    width: 30vw; } }
 
 @media screen and (max-width: 360px) {
   .nav-links {
@@ -333,12 +348,13 @@ footer {
     padding-top: 5vh; }
     .about-container .photo-box {
       height: 40vh;
-      width: 80vw;
+      width: 100vw;
       margin: 0 auto; }
       .about-container .photo-box img {
-        height: 40vh; }
+        height: 30vh;
+        width: 85vw; }
       .about-container .photo-box .photo {
-        width: 80vw;
+        width: 85vw;
         border-radius: 50%; }
     .about-container .bio-box {
       height: 60vh; }
@@ -346,4 +362,8 @@ footer {
         font-size: 16px; }
     .about-container .project {
       margin-bottom: 5vh;
-      height: 100%; } }
+      height: 100%; }
+  .project-box {
+    grid-template-columns: repeat(1, 1fr); }
+    .project-box .button-box button {
+      width: 30vw; } }
