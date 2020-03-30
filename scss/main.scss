@@ -401,6 +401,10 @@ footer {
     .nav-burger {
         display: block;
         cursor: pointer;
+        div {
+            transition: all 0.3s ease-in;
+        }
+        
     }
 
     @keyframes navLinkFade {
@@ -412,6 +416,20 @@ footer {
         to {
             opacity: 1;
             transform: translateX(0%)
+        }
+    }
+
+    .toggle {
+        .line1 {
+            transform: rotate(-45deg) translate(-5px, 3px);
+        }
+
+        .line2 {
+            opacity: 0;
+        }
+
+        .line3 {
+            transform: rotate(45deg) translate(-5px, -3px);
         }
     }
 

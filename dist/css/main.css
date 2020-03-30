@@ -258,6 +258,8 @@ footer {
   .nav-burger {
     display: block;
     cursor: pointer; }
+    .nav-burger div {
+      transition: all 0.3s ease-in; }
   @keyframes navLinkFade {
     from {
       opacity: 0;
@@ -265,6 +267,12 @@ footer {
     to {
       opacity: 1;
       transform: translateX(0%); } }
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 3px); }
+  .toggle .line2 {
+    opacity: 0; }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -3px); }
   .home-name-tag {
     height: 18vh; }
     .home-name-tag h1 {

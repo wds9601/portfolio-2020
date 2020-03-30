@@ -16,7 +16,9 @@ const navSlide = () => {
             }
         })
 
-        //Toggle 
+        //Animate Nav-burger into X when menu active
+        burger.classList.toggle('toggle')
+
     })
 }
 
