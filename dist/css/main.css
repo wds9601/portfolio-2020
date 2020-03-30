@@ -90,7 +90,7 @@ main {
     padding: 20px;
     font-size: 3rem; }
     .home-name-tag .icons :hover {
-      color: #F37335;
+      color: #f953c6;
       transition: 0.5s;
       transition-timing-function: ease-out;
       cursor: pointer; }
@@ -121,7 +121,8 @@ main {
     height: 45vh;
     width: 25vw;
     border: 3px solid black;
-    border-radius: 50%; }
+    border-radius: 50%;
+    transition: all 0.9s ease-out; }
     .about-container img:hover {
       border-color: #12c2e9;
       transition: 0.5s;
@@ -191,12 +192,12 @@ main {
         text-decoration: none;
         color: black; }
       .project-box .button-box button:hover {
-        border: 2px solid #F37335;
+        border: 2px solid #f953c6;
         transition: 0.5s;
         transition-timing-function: ease-out;
         cursor: pointer; }
         .project-box .button-box button:hover a {
-          border-bottom: 1px solid #F37335;
+          border-bottom: 1px solid #f953c6;
           transition: 0.5s;
           transition-timing-function: ease-out; }
 
