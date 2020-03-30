@@ -217,45 +217,16 @@ main {
 
     
 
-    .project1 {
+    .project1, .project2, .project3, .project4 {
         .img-box {
             height: 35vh;
             width: 100%;
             border: 2px solid black;
-            background: url(https://i.imgur.com/nBNRUTa.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-    }
 
-    .project2 {
-        .img-box {
-            height: 35vh;
-            border: 2px solid black;
-            background: url(https://i.imgur.com/t1VCXO8.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-    }
-
-    .project3 {
-        .img-box {
-            height: 35vh;
-            border: 2px solid black;
-            background: url(https://i.imgur.com/Wgz5LOf.png?1);
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-    }
-
-    .project4 {
-        .img-box {
-            height: 35vh;
-            width: auto;
-            border: 2px solid black;
-            background: url(https://i.imgur.com/Jg6oj1i.png);
-            background-size: cover;
-            background-repeat: no-repeat;
+            img {
+                height: 35vh;
+                width: 100%;
+            }
         }
     }
 
@@ -283,6 +254,7 @@ main {
             border: 1px solid black;
             font-size: 0.75rem;
             font-family: Avenir, sans-serif;
+            transition: all 0.75s ease-in;
 
             a {
                 text-decoration: none;

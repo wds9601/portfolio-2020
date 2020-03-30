@@ -18,7 +18,11 @@ const navSlide = () => {
 
         //Animate Nav-burger into X when menu active
         burger.classList.toggle('toggle')
+    })
 
+    nav.addEventListener('click', () => {
+        //Toggle menu when link is clicked
+        nav.classList.toggle('nav-active')
     })
 }
 

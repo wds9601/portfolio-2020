@@ -143,32 +143,13 @@ main {
     margin: 0;
     text-align: center;
     align-items: center; }
-  .project-box .project1 .img-box {
+  .project-box .project1 .img-box, .project-box .project2 .img-box, .project-box .project3 .img-box, .project-box .project4 .img-box {
     height: 35vh;
     width: 100%;
-    border: 2px solid black;
-    background: url(https://i.imgur.com/nBNRUTa.png);
-    background-size: cover;
-    background-repeat: no-repeat; }
-  .project-box .project2 .img-box {
-    height: 35vh;
-    border: 2px solid black;
-    background: url(https://i.imgur.com/t1VCXO8.png);
-    background-size: cover;
-    background-repeat: no-repeat; }
-  .project-box .project3 .img-box {
-    height: 35vh;
-    border: 2px solid black;
-    background: url(https://i.imgur.com/Wgz5LOf.png?1);
-    background-size: cover;
-    background-repeat: no-repeat; }
-  .project-box .project4 .img-box {
-    height: 35vh;
-    width: auto;
-    border: 2px solid black;
-    background: url(https://i.imgur.com/Jg6oj1i.png);
-    background-size: cover;
-    background-repeat: no-repeat; }
+    border: 2px solid black; }
+    .project-box .project1 .img-box img, .project-box .project2 .img-box img, .project-box .project3 .img-box img, .project-box .project4 .img-box img {
+      height: 35vh;
+      width: 100%; }
   .project-box .title {
     margin-top: 0.5rem;
     font-size: 1.5rem; }
@@ -187,7 +168,8 @@ main {
       height: 6vh;
       border: 1px solid black;
       font-size: 0.75rem;
-      font-family: Avenir, sans-serif; }
+      font-family: Avenir, sans-serif;
+      transition: all 0.75s ease-in; }
       .project-box .button-box button a {
         text-decoration: none;
         color: black; }
